@@ -5,25 +5,25 @@ class Constants {
   Constants._();
   static const String title = 'Pokodex';
   static TextStyle getTitleTextStyle() {
-    return const TextStyle(
+    return TextStyle(
       color: Colors.white,
-      fontSize: 48,
+      fontSize: _calculateFontSize(48),
       fontWeight: FontWeight.bold,
     );
   }
 
   static TextStyle getPokemonNameTextStyle() {
-    return const TextStyle(
+    return TextStyle(
       color: Colors.white,
-      fontSize: 30,
+      fontSize: _calculateFontSize(20),
       fontWeight: FontWeight.bold,
     );
   }
 
   static TextStyle getTypeChipTextStyle() {
-    return const TextStyle(
+    return TextStyle(
       color: Colors.white,
-      fontSize: 20,
+      fontSize: _calculateFontSize(20),
     );
   }
 
@@ -33,5 +33,20 @@ class Constants {
     } else {
       return (size * 1.5).sp;
     }
+  }
+
+  static getPokeInfoTextStyle() {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: _calculateFontSize(16),
+    );
+  }
+
+  static getPokeInfoLabelTextStyle() {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: _calculateFontSize(20),
+      fontWeight: FontWeight.bold,
+    );
   }
 }
